@@ -12,11 +12,10 @@ export const useFetch = <T>(type: string): T[] => {
     if (search) {
       setQueryType('search');
     } else {
-        setQueryType('discover');
+      setQueryType('discover');
     }
 
     const controller = new AbortController();
-
     const fetchData = async () => {
       const response = await fetch(type, queryType, controller.signal, search);
       setData(response);
@@ -31,8 +30,7 @@ export const useFetch = <T>(type: string): T[] => {
     return () => {
       controller.abort();
     };
-
-  }, [type, queryType, search]);
+  }, [search, queryType, type]);
 
   return data;
 };
