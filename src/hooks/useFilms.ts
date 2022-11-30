@@ -19,11 +19,14 @@ export const useFilms = <T>(type: string): T[] => {
     }
 
     const fetchData = async () => {
-      const response = await getFilms(type, queryType, controller.signal, search);
+      const response = await getFilms(
+        type,
+        queryType,
+        controller.signal,
+        search
+      );
       setData(response);
     };
-
-    console.log(controller);
 
     try {
       fetchData();
@@ -34,7 +37,6 @@ export const useFilms = <T>(type: string): T[] => {
 
   React.useEffect(() => {
     return () => {
-      console.log(controller);
       controller.abort();
     };
   }, [type]);
