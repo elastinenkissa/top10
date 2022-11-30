@@ -10,13 +10,17 @@ const fetch = async (
   signal: AbortSignal,
   search?: string
 ) => {
-  const response = await axios.get(
-    `${baseUrl}/${queryType}/${type}?sort_by=vote_average.desc&api_key=${REACT_APP_API_KEY}&query=${search}`,
-    {
-      signal,
-    }
-  );
-  return response.data.results.slice(0, 10);
+  try {
+    const response = await axios.get(
+      `${baseUrl}/${queryType}/${type}?sort_by=vote_average.desc&api_key=${REACT_APP_API_KEY}&query=${search}`,
+      {
+        signal,
+      }
+    );
+    return response.data.results.slice(0, 10);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export { fetch };
