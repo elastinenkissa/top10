@@ -1,13 +1,17 @@
-import { FetchedShow, Show } from '../util/types/shows';
-import { useFilms } from './useFilms';
+import { FetchedShow, ListedShow } from '../util/types/shows';
+import { useFetch } from './useFetch';
+import { useImageconfig } from './useImageConfig';
 
 export const useShows = () => {
-  const data = useFilms<FetchedShow>('tv');
+  const data = useFetch<FetchedShow>('tv');
 
-  const shows: Show[] = data.map((show) => {
+  const imageConfig = useImageconfig();
+
+  const shows: ListedShow[] = data.map((show) => {
     return {
       id: show.id,
       name: show.name,
+      img: `${imageConfig?.images.base_url}${imageConfig?.images.poster_sizes[2]}/${show.poster_path}`,
     };
   });
 

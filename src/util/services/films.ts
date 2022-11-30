@@ -1,18 +1,12 @@
 import axios from 'axios';
-import { Query } from '../../context/searchContext';
 
 const REACT_APP_API_KEY = '633146076f611d56dd03e36c216de625';
 const baseUrl = 'https://api.themoviedb.org/3';
 
-const getFilms = async (
-  type: string,
-  queryType: Query,
-  signal: AbortSignal,
-  search?: string
-) => {
+const getTopRated = async (type: string, signal: AbortSignal) => {
   try {
     const response = await axios.get(
-      `${baseUrl}/${queryType}/${type}?sort_by=vote_average.desc&api_key=${REACT_APP_API_KEY}&query=${search}`,
+      `${baseUrl}/${type}/top_rated?api_key=${REACT_APP_API_KEY}`,
       {
         signal,
       }
@@ -23,4 +17,32 @@ const getFilms = async (
   }
 };
 
-export { getFilms };
+const getSearched = async (
+  type: string,
+  signal: AbortSignal,
+  search: string
+) => {
+  try {
+    const response = await axios.get(
+      `${baseUrl}/search/${type}?api_key=${REACT_APP_API_KEY}&query=${search}`,
+      { signal }
+    );
+    return response.data.results;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const getSingle = async (type: string, id: string, signal: AbortSignal) => {
+  try {
+    const response = await axios.get(
+      `${baseUrl}/${type}/${id}?api_key=${REACT_APP_API_KEY}`,
+      { signal }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { getTopRated, getSearched, getSingle };

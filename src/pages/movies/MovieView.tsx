@@ -2,14 +2,14 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useImageconfig } from '../../hooks/useImageConfig';
 import { useSingleFilm } from '../../hooks/useSingleFilm';
-import { FetchedShow } from '../../util/types/shows';
+import { FetchedMovie } from '../../util/types/movies';
 
-const ShowView: React.FC = () => {
+const MovieView: React.FC = () => {
   const { id } = useParams<string>();
 
   const history = useNavigate();
 
-  const show = useSingleFilm<FetchedShow>('tv', id!);
+  const movie = useSingleFilm<FetchedMovie>('movie', id!);
 
   const imageConfig = useImageconfig();
 
@@ -18,15 +18,15 @@ const ShowView: React.FC = () => {
       <p onClick={() => history(-1)}>{'<'} Go back</p>
       <div>
         <img
-          src={`${imageConfig?.images.base_url}${imageConfig?.images.backdrop_sizes[1]}/${show?.backdrop_path}`}
+          src={`${imageConfig?.images.base_url}${imageConfig?.images.backdrop_sizes[1]}/${movie?.backdrop_path}`}
           alt="No preview available"
         />
       </div>
-      <div>{show?.name}</div>
-      <div>Show overview</div>
-      <div>{show?.overview ? show?.overview : 'No overview available'}</div>
+      <div>{movie?.title}</div>
+      <div>Movie overview</div>
+      <div>{movie?.overview ? movie?.overview : 'No overview available'}</div>
     </div>
   );
 };
 
-export default ShowView;
+export default MovieView;

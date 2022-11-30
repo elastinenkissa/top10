@@ -5,8 +5,16 @@ import { ShowProps } from '../../util/types/shows';
 const Show: React.FC<ShowProps> = (props) => {
   return (
     <li>
-      <Link to={`/movies/${props.show.id}`}>
-        <div>{props.show.name}</div>
+      <Link to={`/shows/${props.show.id}`}>
+        <div>
+          <div>
+            <img
+              src={props.show.img}
+              alt="No preview available"
+            />
+          </div>
+          <div>{props.show.name}</div>
+        </div>
       </Link>
     </li>
   );

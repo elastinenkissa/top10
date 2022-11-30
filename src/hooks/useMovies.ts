@@ -1,13 +1,17 @@
-import { FetchedMovie, Movie } from '../util/types/movies';
-import { useFilms } from './useFilms';
+import { FetchedMovie, ListedMovie } from '../util/types/movies';
+import { useFetch } from './useFetch';
+import { useImageconfig } from './useImageConfig';
 
 export const useMovies = () => {
-  const data = useFilms<FetchedMovie>('movie');
+  const data = useFetch<FetchedMovie>('movie');
+  
+  const imageConfig = useImageconfig();
 
-  const movies: Movie[] = data.map((movie) => {
+  const movies: ListedMovie[] = data.map((movie) => {
     return {
       id: movie.id,
       title: movie.title,
+      img: `${imageConfig?.images.base_url}${imageConfig?.images.poster_sizes[2]}/${movie.poster_path}`,
     };
   });
 

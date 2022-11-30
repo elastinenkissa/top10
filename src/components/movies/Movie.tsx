@@ -6,7 +6,15 @@ const Movie: React.FC<MovieProps> = (props) => {
   return (
     <li>
       <Link to={`/movies/${props.movie.id}`}>
-        <div>{props.movie.title}</div>
+      <div>
+          <div>
+            <img
+              src={props.movie.img}
+              alt="No preview available"
+            />
+          </div>
+          <div>{props.movie.title}</div>
+        </div>
       </Link>
     </li>
   );

@@ -1,15 +1,28 @@
 export interface FetchedShow {
-  id: string;
+  backdrop_path: string;
+  first_air_date: string;
+  genre_ids: Array<number>;
+  id: number;
   name: string;
+  origin_country: Array<string>;
+  original_language: string;
+  original_name: string;
   overview: string;
-  [any: string]: any;
+  popularity: number;
+  poster_path: string;
+  vote_average: number;
+  vote_count: number;
 }
 
 export interface Show {
-  id: string;
+  id: number;
   name: string;
+  img: string;
+  overview?: string;
 }
 
+export type ListedShow = Omit<Show, 'overview'>;
+
 export interface ShowProps {
-  show: Show;
+  show: ListedShow;
 }
