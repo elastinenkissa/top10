@@ -4,21 +4,21 @@ import { fetch } from '../util/services/fetch';
 
 export const useFetch = <T>(type: string): T[] => {
   const [data, setData] = React.useState<T[]>([]);
-  const [query, setQuery] = React.useState<string>('discover');
+  const [queryType, setQueryType] = React.useState<string>('discover');
 
   const { search } = React.useContext<Search>(SearchContext);
 
   React.useEffect(() => {
     if (search) {
-      setQuery('search');
+      setQueryType('search');
     } else {
-      setQuery('discover');
+        setQueryType('discover');
     }
 
     const controller = new AbortController();
 
     const fetchData = async () => {
-      const response = await fetch(type, query, controller.signal, search);
+      const response = await fetch(type, queryType, controller.signal, search);
       setData(response);
     };
 
@@ -31,8 +31,8 @@ export const useFetch = <T>(type: string): T[] => {
     return () => {
       controller.abort();
     };
-    
-  }, [type, query, search]);
+
+  }, [type, queryType, search]);
 
   return data;
 };

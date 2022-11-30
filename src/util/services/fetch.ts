@@ -6,12 +6,12 @@ const baseUrl = 'https://api.themoviedb.org/3';
 
 const fetch = async (
   type: string,
-  query: Query,
+  queryType: Query,
   signal: AbortSignal,
   search?: string
 ) => {
   const response = await axios.get(
-    `${baseUrl}/${query}/${type}?sort_by=vote_average.desc&api_key=${REACT_APP_API_KEY}&query=${search}`,
+    `${baseUrl}/${queryType}/${type}?sort_by=vote_average.desc&api_key=${REACT_APP_API_KEY}&query=${search}`,
     {
       signal,
     }
