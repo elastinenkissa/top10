@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ShowProps } from '../../util/types/shows';
 
-const Show: React.FC<{ show: { id: string; name: string } }> = (props) => {
+const Show: React.FC<ShowProps> = (props) => {
   return (
     <li>
       <Link to={`/movies/${props.show.id}`}>

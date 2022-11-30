@@ -9,3 +9,7 @@ export interface Show {
   id: string;
   name: string;
 }
+
+export interface ShowProps {
+  show: Show;
+}
