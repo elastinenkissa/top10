@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/shared/Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Searchbar from './components/shared/Searchbar';
+import MoviesList from './pages/movies/MoviesList';
+import ShowsList from './pages/shows/ShowsList';
+import { Query, SearchContext } from './context/searchContext';
 
-function App() {
+const App: React.FC = () => {
+  const [search, setSearch] = React.useState<Query>('');
+
+  const updateSearch = (query: Query) => {
+    setSearch(query);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchContext.Provider value={{ search, updateSearch }}>
+      <Router>
+        <div>
+          <Navbar />
+          <Searchbar />
+        </div>
+        <Routes>
+          <Route path="/" element={<ShowsList />} />
+          <Route path="/movies" element={<MoviesList />} />
+        </Routes>
+      </Router>
+    </SearchContext.Provider>
   );
-}
+};
 
 export default App;
