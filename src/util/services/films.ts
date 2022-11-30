@@ -4,7 +4,7 @@ import { Query } from '../../context/searchContext';
 const REACT_APP_API_KEY = '633146076f611d56dd03e36c216de625';
 const baseUrl = 'https://api.themoviedb.org/3';
 
-const fetch = async (
+const getFilms = async (
   type: string,
   queryType: Query,
   signal: AbortSignal,
@@ -23,4 +23,4 @@ const fetch = async (
   }
 };
 
-export { fetch };
+export { getFilms };

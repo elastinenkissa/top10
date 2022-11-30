@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { Search, SearchContext } from '../context/searchContext';
-import { fetch } from '../util/services/fetch';
+import { getFilms } from '../util/services/films';
 
 export const useFetch = <T>(type: string): T[] => {
   const [data, setData] = React.useState<T[]>([]);
@@ -19,7 +19,7 @@ export const useFetch = <T>(type: string): T[] => {
     }
 
     const fetchData = async () => {
-      const response = await fetch(type, queryType, controller.signal, search);
+      const response = await getFilms(type, queryType, controller.signal, search);
       setData(response);
     };
 
