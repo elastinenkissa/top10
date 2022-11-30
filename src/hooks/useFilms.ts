@@ -3,7 +3,7 @@ import React from 'react';
 import { Search, SearchContext } from '../context/searchContext';
 import { getFilms } from '../util/services/films';
 
-export const useFetch = <T>(type: string): T[] => {
+export const useFilms = <T>(type: string): T[] => {
   const [data, setData] = React.useState<T[]>([]);
   const [queryType, setQueryType] = React.useState<string>('discover');
 

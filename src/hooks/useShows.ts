@@ -1,8 +1,8 @@
 import { FetchedShow, Show } from '../util/types/shows';
-import { useFetch } from './useFetch';
+import { useFilms } from './useFilms';
 
 export const useShows = () => {
-  const data = useFetch<FetchedShow>('tv');
+  const data = useFilms<FetchedShow>('tv');
 
   const shows: Show[] = data.map((show) => {
     return {
