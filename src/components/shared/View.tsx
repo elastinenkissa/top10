@@ -51,8 +51,10 @@ const View: React.FC<Props> = (props) => {
         )}
       </div>
       <h1>{film?.name || film?.title}</h1>
-      <p>Overview</p>
-      <div>{film?.overview ? film?.overview : 'No overview available'}</div>
+      <h4>Overview</h4>
+      <p>
+        {film?.overview ? film?.overview : <em>No overview available</em>}
+      </p>
     </div>
   );
 };
