@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { SearchContext } from './context/searchContext';
 
-import Navbar from './components/shared/Navbar';
+import Navbar from './components/shared/Navigation/Navbar';
 import MoviesList from './pages/movies/MoviesList';
 import ShowsList from './pages/shows/ShowsList';
 import ShowView from './pages/shows/ShowView';

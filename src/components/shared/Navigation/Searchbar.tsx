@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Search, SearchContext } from '../../context/searchContext';
+import { Search, SearchContext } from '../../../context/searchContext';
 
 import styles from './Searchbar.module.css';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useMovies } from '../../hooks/useMovies';
 
-import styles from '../List.module.css';
+import styles from '../shared/List.module.css';
 
 import Movie from '../../components/movies/Movie';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { FilmProps } from '../../util/types/films';
+import { FilmProps } from '../../../util/types/films';
 
 import styles from './Card.module.css';
 

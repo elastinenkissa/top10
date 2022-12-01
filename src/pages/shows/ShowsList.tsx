@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useShows } from '../../hooks/useShows';
 
-import styles from '../List.module.css';
+import styles from '../shared/List.module.css';
 
 import Show from '../../components/shows/Show';
 

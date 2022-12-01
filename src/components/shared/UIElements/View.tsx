@@ -2,13 +2,13 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import YouTube, { YouTubeProps } from 'react-youtube';
 
-import { useImageconfig } from '../../hooks/useImageConfig';
-import { useSingleFilm } from '../../hooks/useSingleFilm';
+import { useImageconfig } from '../../../hooks/useImageConfig';
+import { useSingleFilm } from '../../../hooks/useSingleFilm';
 
 import styles from './View.module.css';
 
-import { Movie } from '../../util/types/movies';
-import { Show } from '../../util/types/shows';
+import { Movie } from '../../../util/types/movies';
+import { Show } from '../../../util/types/shows';
 
 type Film = Show & Movie;
 
@@ -21,7 +21,7 @@ const View: React.FC<Props> = (props) => {
 
   const redirect = useNavigate();
 
-  const film = useSingleFilm<Film>(props.type, id!);
+  const film = useSingleFilm<Film>(props.type, id as string);
 
   const imageConfig = useImageconfig();
   const imageUrlBase = `${imageConfig?.images.base_url}${imageConfig?.images.backdrop_sizes[1]}`;
@@ -44,7 +44,7 @@ const View: React.FC<Props> = (props) => {
             src={
               film?.backdrop_path
                 ? `${imageUrlBase}/${film?.backdrop_path}`
-                : require('../../assets/images/unavailable.jpeg')
+                : require('../../../assets/images/unavailable.jpeg')
             }
             alt="Cover"
           />

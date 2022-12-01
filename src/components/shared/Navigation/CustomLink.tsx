@@ -12,7 +12,7 @@ const CustomLink: React.FC<LinkProps> = (props) => {
       to={props.to}
       style={({ isActive }) => ({
         paddingRight: 20,
-        color: isActive ? '#F08080' : 'white',
+        color: isActive ? '#F08080' : 'white'
       })}
     >
       {props.children}
