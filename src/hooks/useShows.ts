@@ -1,9 +1,9 @@
-import { FetchedShow, ListedShow } from '../util/types/shows';
+import { Show, ListedShow } from '../util/types/shows';
 import { useFetch } from './useFetch';
 import { useImageconfig } from './useImageConfig';
 
 export const useShows = () => {
-  const data = useFetch<FetchedShow>('tv');
+  const data = useFetch<Show>('tv');
 
   const imageConfig = useImageconfig();
 

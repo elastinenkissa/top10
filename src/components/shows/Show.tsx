@@ -1,23 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ShowProps } from '../../util/types/shows';
+import Card from '../shared/Card';
 
 const Show: React.FC<ShowProps> = (props) => {
-  return (
-    <li>
-      <Link to={`/shows/${props.show.id}`}>
-        <div>
-          <div>
-            <img
-              src={props.show.img}
-              alt="No preview available"
-            />
-          </div>
-          <div>{props.show.name}</div>
-        </div>
-      </Link>
-    </li>
-  );
+  return <Card film={props.show} path="shows" alt="Show poster" />;
 };
 
 export default Show;

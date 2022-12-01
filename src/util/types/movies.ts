@@ -1,29 +1,20 @@
-export interface FetchedMovie {
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: Array<number>;
-  id: number;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
+import { Videos } from './films';
 
-export interface Movie {
+export interface MovieBase {
   id: number;
   title: string;
   img: string;
-  overview?: string;
 }
 
-export type ListedMovie = Omit<Movie, 'overview'>;
+export interface Movie extends MovieBase {
+  backdrop_path: string;
+  poster_path: string;
+  overview: string;
+  videos: Videos;
+}
+
+export type ListedMovie = MovieBase
 
 export interface MovieProps {
-  movie: Movie;
+  movie: MovieBase;
 }

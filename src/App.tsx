@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './components/shared/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Searchbar from './components/shared/Searchbar';
+
+import Navbar from './components/shared/Navbar';
 import MoviesList from './pages/movies/MoviesList';
 import ShowsList from './pages/shows/ShowsList';
 import { SearchContext } from './context/searchContext';
@@ -17,18 +17,17 @@ const App: React.FC = () => {
 
   return (
     <SearchContext.Provider value={{ search, updateSearch }}>
-      <Router>
-        <div>
+      <div style={{ margin: 50 }}>
+        <Router>
           <Navbar />
-          <Searchbar />
-        </div>
-        <Routes>
-          <Route path="/" element={<ShowsList />} />
-          <Route path="/movies" element={<MoviesList />} />
-          <Route path="/shows/:id" element={<ShowView />} />
-          <Route path="/movies/:id" element={<MovieView />} />
-        </Routes>
-      </Router>
+          <Routes>
+            <Route path="/" element={<ShowsList />} />
+            <Route path="/movies" element={<MoviesList />} />
+            <Route path="/shows/:id" element={<ShowView />} />
+            <Route path="/movies/:id" element={<MovieView />} />
+          </Routes>
+        </Router>
+      </div>
     </SearchContext.Provider>
   );
 };

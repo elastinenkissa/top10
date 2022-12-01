@@ -1,9 +1,9 @@
-import { FetchedMovie, ListedMovie } from '../util/types/movies';
+import { Movie, ListedMovie } from '../util/types/movies';
 import { useFetch } from './useFetch';
 import { useImageconfig } from './useImageConfig';
 
 export const useMovies = () => {
-  const data = useFetch<FetchedMovie>('movie');
+  const data = useFetch<Movie>('movie');
   
   const imageConfig = useImageconfig();
 

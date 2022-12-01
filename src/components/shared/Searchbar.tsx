@@ -2,8 +2,8 @@ import React from 'react';
 import { Search, SearchContext } from '../../context/searchContext';
 
 const Searchbar: React.FC = () => {
-  const { updateSearch } = React.useContext<Search>(SearchContext);
-  const [input, setInput] = React.useState<string>('');
+  const { search, updateSearch } = React.useContext<Search>(SearchContext);
+  const [input, setInput] = React.useState<string>(search);
 
   React.useEffect(() => {
     const timer = setTimeout(() => {

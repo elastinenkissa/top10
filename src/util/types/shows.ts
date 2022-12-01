@@ -1,27 +1,19 @@
-export interface FetchedShow {
-  backdrop_path: string;
-  first_air_date: string;
-  genre_ids: Array<number>;
-  id: number;
-  name: string;
-  origin_country: Array<string>;
-  original_language: string;
-  original_name: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  vote_average: number;
-  vote_count: number;
-}
+import { Videos } from './films';
 
-export interface Show {
+export interface ShowBase {
   id: number;
   name: string;
   img: string;
-  overview?: string;
 }
 
-export type ListedShow = Omit<Show, 'overview'>;
+export interface Show extends ShowBase {
+  backdrop_path: string;
+  poster_path: string;
+  overview: string;
+  videos: Videos;
+}
+
+export type ListedShow = ShowBase;
 
 export interface ShowProps {
   show: ListedShow;

@@ -16,28 +16,20 @@ export const useFetch = <T>(type: string): T[] => {
   };
 
   const fetchSearchedData = async () => {
-    const response: T[] = await getSearched(
-      type,
-      controller.signal,
-      search
-    );
+    const response: T[] = await getSearched(type, controller.signal, search);
     setData(response);
   };
 
   React.useEffect(() => {
-    if (search) {
-      try {
+    try {
+      if (search) {
         fetchSearchedData();
-      } catch (error) {
-        console.log(error);
       }
-    }
-    if (!search) {
-      try {
+      if (!search) {
         fetchData();
-      } catch (error) {
-        console.log(error);
       }
+    } catch (error) {
+      console.log(error);
     }
 
     return () => {

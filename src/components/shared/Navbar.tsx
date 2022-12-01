@@ -1,12 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import Links from './Links';
+import Searchbar from './Searchbar';
 
 const Navbar: React.FC = () => {
+  const { pathname } = useLocation();
+
   return (
-    <div>
-      <Link to={'/'}>TV Shows</Link>
-      <Link to={'/movies'}>Movies</Link>
-    </div>
+    <>
+      {(pathname === '/' || pathname === '/movies') && (
+        <>
+          <Links />
+          <Searchbar />
+        </>
+      )}
+    </>
   );
 };
 
