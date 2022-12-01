@@ -21,7 +21,12 @@
   align-items: center;
 }
 
-.back > strong {
+.back:hover{
+  color: #f08080
+}
+
+.back > p {
   margin-right: 0.6rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 100;
 }

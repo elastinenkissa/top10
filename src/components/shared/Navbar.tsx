@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {(pathname === '/' || pathname === '/movies') && (
-        <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
           <Links />
           <Searchbar />
         </div>

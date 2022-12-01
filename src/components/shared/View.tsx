@@ -33,7 +33,7 @@ const View: React.FC<Props> = (props) => {
   return (
     <div>
       <div onClick={() => redirect(-1)} className={styles.back}>
-        <strong>{'<'}</strong> Back
+        <p>{'<'}</p> Back
       </div>
       <div className={styles.container}>
         {trailer ? (

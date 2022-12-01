@@ -11,12 +11,8 @@ const CustomLink: React.FC<LinkProps> = (props) => {
     <NavLink
       to={props.to}
       style={({ isActive }) => ({
-        color: 'white',
-        borderColor: '#F08080',
-        borderWidth: '0.1rem',
-        borderStyle: 'solid',
-        padding: 5,
-        backgroundColor: isActive ? '#F08080' : 'transparent',
+        paddingRight: 20,
+        color: isActive ? '#F08080' : 'white',
       })}
     >
       {props.children}
