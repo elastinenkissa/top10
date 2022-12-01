@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export interface Search {
   search: string;
   updateSearch: (query: string) => void;
@@ -8,5 +7,6 @@ export interface Search {
 
 export const SearchContext = React.createContext<Search>({
   search: '',
-  updateSearch: (_query: string) => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
+  updateSearch: (_query: string) => {}
 });

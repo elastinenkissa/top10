@@ -24,12 +24,12 @@ const Searchbar: React.FC = () => {
   };
 
   return (
-      <input
-        className={styles.search}
-        value={input}
-        onChange={searchHandler}
-        placeholder="Search"
-      />
+    <input
+      className={styles.search}
+      value={input}
+      onChange={searchHandler}
+      placeholder="Search"
+    />
   );
 };
 

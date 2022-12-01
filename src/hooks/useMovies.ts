@@ -16,7 +16,7 @@ export const useMovies = () => {
       title: movie.title,
       img: movie.poster_path
         ? `${imageBaseUrl}/${movie.poster_path}`
-        : require(`../assets/images/unavailable-portrait.png`),
+        : require('../assets/images/unavailable-portrait.png')
     };
   });
 

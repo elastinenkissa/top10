@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
 import { getSingle } from '../util/services/films';
@@ -9,7 +8,7 @@ export const useSingleFilm = <T>(type: string, id: string) => {
   const controller = new AbortController();
 
   const fetchFilm = async () => {
-    const response: T = await getSingle(type, id, controller.signal);    
+    const response: T = await getSingle(type, id, controller.signal);
     setFilm(response);
   };
 

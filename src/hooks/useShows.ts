@@ -15,7 +15,7 @@ export const useShows = () => {
       name: show.name,
       img: show.poster_path
         ? `${imageBaseUrl}/${show.poster_path}`
-        : require(`../assets/images/unavailable-portrait.png`),
+        : require('../assets/images/unavailable-portrait.png')
     };
   });
 
