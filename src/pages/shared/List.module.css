@@ -4,6 +4,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 950px) {
+  .list {
+    justify-content: center;
+    margin: 1rem;
+  }
+}
+
 .list > li {
   flex-basis: 25%;
 }

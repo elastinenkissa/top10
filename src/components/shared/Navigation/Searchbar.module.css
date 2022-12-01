@@ -16,3 +16,9 @@
   outline: none;
   border-color: #ec4d4d;
 }
+
+@media screen and (max-width: 950px) {
+  .search {
+    width: 300px;
+  }
+}
