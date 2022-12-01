@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { SearchContext } from './context/searchContext';
+
 import Navbar from './components/shared/Navbar';
 import MoviesList from './pages/movies/MoviesList';
 import ShowsList from './pages/shows/ShowsList';
-import { SearchContext } from './context/searchContext';
 import ShowView from './pages/shows/ShowView';
 import MovieView from './pages/movies/MovieView';
 

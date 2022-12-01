@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
+
 import { getSingle } from '../util/services/films';
 
 export const useSingleFilm = <T>(type: string, id: string) => {

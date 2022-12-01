@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import { FilmProps } from '../../util/types/films';
+
+import styles from './Card.module.css';
 
 const Card: React.FC<FilmProps> = (props) => {
   return (
-    <div>
-      {' '}
+    <li className={styles.card}>
       <Link to={`/${props.path}/${props.film.id}`}>
-        <>
-          <div>
-            <img src={props.film.img} alt={props.alt} />
-          </div>
-          <>{props.film.title || props.film.name}</>
-        </>
+        <div>
+          <img className={styles.image} src={props.film.img} alt={props.alt} />
+        </div>
+        <h2>{props.film.title || props.film.name}</h2>
       </Link>
-    </div>
+    </li>
   );
 };
 

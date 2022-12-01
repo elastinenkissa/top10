@@ -1,0 +1,17 @@
+.search {
+  margin-top: 2rem;
+  height: 1.6rem;
+  border-radius: 5rem;
+  padding-left: 1rem;
+  border-style: solid;
+  border-color: #f08080;
+  border-width: 0.15rem;
+}
+
+.search:hover {
+  border-color: white;
+}
+
+.search:focus {
+  outline: none;
+}

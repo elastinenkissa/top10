@@ -1,12 +1,16 @@
 import React from 'react';
-import Show from '../../components/shows/Show';
+
 import { useShows } from '../../hooks/useShows';
+
+import styles from '../List.module.css';
+
+import Show from '../../components/shows/Show';
 
 const ShowsList: React.FC = () => {
   const shows = useShows();
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {shows.map((show) => (
         <Show key={show.id} show={show} />
       ))}

@@ -1,0 +1,20 @@
+.card {
+  width: 342px;
+  list-style: none;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: transparent;
+  background-color: #20232a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+.image {
+  height: 30rem;
+  width: 20rem;
+}

@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
+
 import { Search, SearchContext } from '../context/searchContext';
+
 import { getTopRated, getSearched } from '../util/services/films';
 
 export const useFetch = <T>(type: string): T[] => {

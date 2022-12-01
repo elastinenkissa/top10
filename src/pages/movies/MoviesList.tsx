@@ -1,13 +1,16 @@
 import React from 'react';
-import Movie from '../../components/movies/Movie';
+
 import { useMovies } from '../../hooks/useMovies';
 
+import styles from '../List.module.css';
+
+import Movie from '../../components/movies/Movie';
+
 const MoviesList: React.FC = () => {
- const movies = useMovies()
- 
+  const movies = useMovies();
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {movies.map((movie) => (
         <Movie key={movie.id} movie={movie} />
       ))}

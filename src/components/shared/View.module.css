@@ -1,0 +1,27 @@
+.container {
+  margin-top: 1rem;
+  box-shadow: inset 10px 10px 100px black;
+}
+
+.image {
+  width: 100%;
+  height: 500px;
+}
+
+@media screen and (max-width: 1030px) {
+  .image {
+    height: 100%;
+  }
+}
+
+.back {
+  cursor: pointer;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back > strong {
+  margin-right: 0.6rem;
+  font-size: 1.1rem;
+}

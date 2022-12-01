@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 const Links: React.FC = () => {
   return (
     <div>
-      <Link to={'/'}>TV Shows</Link>
-      <Link to={'/movies'}>Movies</Link>
+      <CustomLink to='/'>TV Shows</CustomLink>
+      <CustomLink to='/movies'>Movies</CustomLink>
     </div>
   );
 };
