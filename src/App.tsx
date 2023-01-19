@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <SearchContext.Provider value={{ search, updateSearch }}>
       <div style={{ margin: 50 }}>
-        <Router>
+        <Router basename="/top10">
           <Navbar />
           <Routes>
             <Route path="/" element={<ShowsList />} />
