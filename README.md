@@ -9,3 +9,6 @@ The preview of this app can be found <a href="https://nusretwazowski.github.io/t
 The application has 2 basic functions:
 1. Display top 10 rated TV shows and top 10 rated movies
 2. Search for any TV show or movie
+
+# Todo
+1. Better UI
