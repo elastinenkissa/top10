@@ -3,7 +3,7 @@ Top 10 is a small web application created using React with TypeScript for a job 
 
 This web application only has a frontend which was made from scratch. It utilizes React context for global state management (search query) and custom hooks for data fetching. The data is fetched from an external API (The Movie Database API).
 
-The preview of this app can be found <a href="https://nusretwazowski.github.io/top10/">here</a>
+The preview of this app can be found <a href="https://gilded-biscotti-ba67f2.netlify.app/">here</a>
 
 # Usage
 The application has 2 basic functions:
