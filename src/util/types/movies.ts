@@ -12,7 +12,7 @@ export interface Movie extends MovieBase {
   overview: string;
   videos: Videos;
 }
-
+ 
 export type ListedMovie = MovieBase
 
 export interface MovieProps {

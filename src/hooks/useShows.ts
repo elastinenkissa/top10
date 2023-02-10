@@ -8,7 +8,7 @@ export const useShows = () => {
 
   const imageConfig = useImageconfig();
   const imageBaseUrl = `${imageConfig?.images.base_url}${imageConfig?.images.poster_sizes[3]}`;
-
+ 
   const shows: ListedShow[] = data.map((show) => {
     return {
       id: show.id,

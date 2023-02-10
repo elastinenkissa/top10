@@ -11,7 +11,7 @@ import MovieView from './pages/movies/MovieView';
 
 const App: React.FC = () => {
   const [search, setSearch] = React.useState<string>('');
-
+ 
   const updateSearch = (query: string) => {
     setSearch(query);
   };

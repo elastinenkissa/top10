@@ -7,3 +7,4 @@ const MovieView: React.FC = () => {
 };
 
 export default MovieView;
+ 

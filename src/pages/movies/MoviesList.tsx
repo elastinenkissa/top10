@@ -17,5 +17,5 @@ const MoviesList: React.FC = () => {
     </ul>
   );
 };
-
+ 
 export default MoviesList;

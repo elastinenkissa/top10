@@ -10,7 +10,7 @@
     justify-content: center;
     margin: 1rem;
   }
-}
+} 
 
 .list > li {
   flex-basis: 25%;

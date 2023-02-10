@@ -9,7 +9,7 @@ export const useMovies = () => {
   const imageConfig = useImageconfig();
 
   const imageBaseUrl = `${imageConfig?.images.base_url}${imageConfig?.images.poster_sizes[3]}`;
-
+ 
   const movies: ListedMovie[] = data.map((movie) => {
     return {
       id: movie.id,

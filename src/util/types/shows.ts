@@ -12,7 +12,7 @@ export interface Show extends ShowBase {
   overview: string;
   videos: Videos;
 }
-
+ 
 export type ListedShow = ShowBase;
 
 export interface ShowProps {

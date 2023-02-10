@@ -10,7 +10,7 @@ export const useSingleFilm = <T>(type: string, id: string) => {
   const fetchFilm = async () => {
     const response: T = await getSingle(type, id, controller.signal);
     setFilm(response);
-  };
+  }; 
 
   React.useEffect(() => {
     fetchFilm();

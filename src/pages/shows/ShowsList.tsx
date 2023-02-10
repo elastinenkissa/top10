@@ -8,7 +8,7 @@ import Show from '../../components/shows/Show';
 
 const ShowsList: React.FC = () => {
   const shows = useShows();
-
+ 
   return (
     <ul className={styles.list}>
       {shows.map((show) => (

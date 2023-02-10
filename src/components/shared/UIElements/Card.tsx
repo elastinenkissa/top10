@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FilmProps } from '../../../util/types/films';
 
 import styles from './Card.module.css';
-
+ 
 const Card: React.FC<FilmProps> = (props) => {
   return (
     <li className={styles.card}>

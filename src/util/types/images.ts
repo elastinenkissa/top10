@@ -5,3 +5,4 @@ export interface ImageConfig {
     poster_sizes: Array<string>;
   };
 }
+ 

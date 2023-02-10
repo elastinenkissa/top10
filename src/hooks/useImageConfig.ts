@@ -11,7 +11,7 @@ export const useImageconfig = () => {
   const getImageData = async () => {
     const imageData = await getImageConfig(controller.signal);
     setImageConfig(imageData);
-  };
+  }; 
 
   React.useEffect(() => {
     getImageData();

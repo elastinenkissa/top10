@@ -12,3 +12,4 @@ The application has 2 basic functions:
 
 # Todo
 1. Better UI
+ 

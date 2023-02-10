@@ -7,6 +7,6 @@ const Navbar: React.FC = () => {
   const { pathname } = useLocation();
 
   return <NavbarPure pathname={pathname} />;
-};
+}; 
 
 export default Navbar;

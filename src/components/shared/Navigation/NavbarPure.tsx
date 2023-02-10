@@ -7,7 +7,7 @@ import Searchbar from './Searchbar';
 
 interface NavbarPureProps {
   pathname: string;
-}
+} 
 
 const NavbarPure: React.FC<NavbarPureProps> = (props) => {
   return (

@@ -9,7 +9,7 @@ import styles from './View.module.css';
 
 import { Movie } from '../../../util/types/movies';
 import { Show } from '../../../util/types/shows';
-
+ 
 type Film = Show & Movie;
 
 interface Props {

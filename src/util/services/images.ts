@@ -12,3 +12,4 @@ const getImageConfig = async (signal: AbortSignal) => {
 };
 
 export { getImageConfig };
+ 

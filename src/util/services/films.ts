@@ -15,7 +15,7 @@ const getTopRated = async (type: string, signal: AbortSignal) => {
   } catch (error) {
     console.log(error);
   }
-};
+}; 
 
 const getSearched = async (
   type: string,

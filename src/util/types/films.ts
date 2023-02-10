@@ -17,3 +17,4 @@ export interface FilmProps {
   alt: string;
   path: string;
 }
+ 

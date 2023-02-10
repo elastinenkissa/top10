@@ -8,7 +8,7 @@ export const useFetch = <T>(type: string): T[] => {
   const [data, setData] = React.useState<T[]>([]);
 
   const { search } = React.useContext<Search>(SearchContext);
-
+ 
   const controller = new AbortController();
 
   const fetchData = async () => {

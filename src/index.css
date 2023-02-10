@@ -9,7 +9,7 @@ body {
   background-color: #272a31;
   color: white;
 }
-
+ 
 @media screen and (max-width: 950px) {
   body {
     margin: 0;

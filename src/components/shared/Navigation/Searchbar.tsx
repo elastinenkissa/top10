@@ -7,7 +7,7 @@ import styles from './Searchbar.module.css';
 const Searchbar: React.FC = () => {
   const { search, updateSearch } = React.useContext<Search>(SearchContext);
   const [input, setInput] = React.useState<string>(search);
-
+ 
   React.useEffect(() => {
     const timer = setTimeout(() => {
       if (input.length < 3) {
